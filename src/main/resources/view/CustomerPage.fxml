@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="cashierCustomerPage" prefHeight="887.0" prefWidth="1328.0" style="-fx-background-color: A0E9FF;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.assignment.final_course_work.controller.CustomerPageController">
+    <children>
+        <Text layoutX="3.0" layoutY="62.0" stroke="#3b42ff" strokeType="OUTSIDE" text="Customer" textAlignment="CENTER" wrappingWidth="1321.13671875">
+            <font>
+                <Font name="Arial Bold" size="50.0" />
+            </font>
+            <fill>
+                <LinearGradient endX="1.0" endY="1.0">
+                    <stops>
+                        <Stop>
+                            <color>
+                                <Color />
+                            </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                            <color>
+                                <Color red="0.09892787784337997" green="0.09892787784337997" blue="0.7368420958518982" />
+                            </color>
+                        </Stop>
+                    </stops>
+                </LinearGradient>
+            </fill>
+        </Text>
+        <TableView fx:id="customerTable" layoutY="538.0" onMouseClicked="#onClickTable" prefHeight="363.0" prefWidth="1327.0">
+            <columns>
+                <TableColumn fx:id="customerID" prefWidth="118.66666412353516" text="Customer ID" />
+                <TableColumn fx:id="customerName" prefWidth="197.33333587646484" text="Customer Name" />
+                <TableColumn fx:id="customerEmail" minWidth="0.0" prefWidth="207.33334350585938" text="Customer Email" />
+                <TableColumn fx:id="customerAddress" prefWidth="382.66668701171875" text="Customer Address" />
+                <TableColumn fx:id="customerPhone" prefWidth="253.33331298828125" text="Customer Contact Number" />
+                <TableColumn fx:id="customerAddEmployee" prefWidth="168.3333740234375" text="Employee ID" />
+            </columns>
+        </TableView>
+        <Pane layoutX="189.0" layoutY="91.0" prefHeight="433.0" prefWidth="956.0" style="-fx-background-color: radial-gradient(focus-angle 0.0deg, focus-distance 0.0% , center 44.4751% 50.0%, radius 50.0%, #d4e5ee 0.0%, #4cc9fe 100.0%); -fx-background-radius: 50;">
+            <children>
+                <JFXButton fx:id="btnSaveCustomer" layoutX="53.0" layoutY="356.0" onAction="#saveCustomerOnAction" prefHeight="47.0" prefWidth="136.0" style="-fx-background-color: radial-gradient(focus-angle 0.0deg, focus-distance 0.0% , center 50.0% 51.8957%, radius 50.0%, #0acafe 0.0%, #0acafe 41.6107%, #0280f6 100.0%); -fx-background-radius: 32;" text="Save" textFill="WHITE">
+                    <font>
+                        <Font name="Arial Bold" size="23.0" />
+                    </font>
+                    <ripplerFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                            <stops>
+                                <Stop>
+                                    <color>
+                                        <Color />
+                                    </color>
+                                </Stop>
+                                <Stop offset="0.006711409395973154">
+                                    <color>
+                                        <Color red="1.0" green="1.0" blue="1.0" />
+                                    </color>
+                                </Stop>
+                                <Stop offset="0.5387133737109182">
+                                    <color>
+                                        <Color red="0.21320663392543793" green="0.7676860094070435" blue="0.9210526347160339" />
+                                    </color>
+                                </Stop>
+                                <Stop offset="1.0">
+                                    <color>
+                                        <Color red="0.02302631549537182" green="0.48135966062545776" blue="0.7105262875556946" />
+                                    </color>
+                                </Stop>
+                            </stops>
+                        </LinearGradient>
+                    </ripplerFill>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </JFXButton>
+                <JFXButton fx:id="btnUpdateCustomer" layoutX="272.0" layoutY="356.0" onAction="#updateCustomeronAction" prefHeight="47.0" prefWidth="136.0" style="-fx-background-color: radial-gradient(focus-angle 0.0deg, focus-distance 0.0% , center 50.0% 51.8957%, radius 50.0%, #0acafe 0.0%, #0acafe 41.6107%, #0280f6 100.0%); -fx-background-radius: 32;" text="Update" textFill="WHITE">
+                    <font>
+                        <Font name="Arial Bold" size="23.0" />
+                    </font>
+                    <ripplerFill>
+                        <LinearGradient endX="0.5876777251184835" endY="0.8815165876777251" startX="0.4265402843601896">
+                            <stops>
+                                <Stop>
+                                    <color>
+                                        <Color red="1.0" green="1.0" blue="1.0" />
+                                    </color>
+                                </Stop>
+                                <Stop offset="0.006711409395973154">
+                                    <color>
+                                        <Color red="1.0" green="1.0" blue="1.0" />
+                                    </color>
+                                </Stop>
+                                <Stop offset="0.4899328859060403">
+                                    <color>
+                                        <Color red="0.32549020648002625" green="0.8509804010391235" blue="1.0" />
+                                    </color>
+                                </Stop>
+                                <Stop offset="0.996951219512195">
+                                    <color>
+                                        <Color red="0.03179824724793434" green="0.6046966314315796" blue="0.7631579041481018" />
+                                    </color>
+                                </Stop>
+                                <Stop offset="1.0">
+                                    <color>
+                                        <Color red="0.03179824724793434" green="0.6046966314315796" blue="0.7631579041481018" />
+                                    </color>
+                                </Stop>
+                            </stops>
+                        </LinearGradient>
+                    </ripplerFill>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </JFXButton>
+                <JFXButton fx:id="btnDeleteCustomer" layoutX="478.0" layoutY="360.0" onAction="#deleteCustomerOnAction" prefHeight="47.0" prefWidth="136.0" style="-fx-background-color: radial-gradient(focus-angle 0.0deg, focus-distance 0.0% , center 50.0% 51.8957%, radius 50.0%, #0acafe 0.0%, #0acafe 41.6107%, #0280f6 100.0%); -fx-background-radius: 32;" text="Delete" textFill="WHITE">
+                    <font>
+                        <Font name="Arial Bold" size="23.0" />
+                    </font>
+                    <ripplerFill>
+                        <LinearGradient endX="0.5876777251184835" endY="0.8815165876777251" startX="0.4265402843601896">
+                            <stops>
+                                <Stop>
+                                    <color>
+                                        <Color red="1.0" green="1.0" blue="1.0" />
+                                    </color>
+                                </Stop>
+                                <Stop offset="0.006711409395973154">
+                                    <color>
+                                        <Color red="1.0" green="1.0" blue="1.0" />
+                                    </color>
+                                </Stop>
+                                <Stop offset="0.46646341463414637">
+                                    <color>
+                                        <Color red="0.30079999566078186" green="0.6310533285140991" blue="0.9399999976158142" />
+                                    </color>
+                                </Stop>
+                                <Stop offset="1.0">
+                                    <color>
+                                        <Color green="0.4622806906700134" blue="0.8947368264198303" />
+                                    </color>
+                                </Stop>
+                            </stops>
+                        </LinearGradient>
+                    </ripplerFill>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </JFXButton>
+                <JFXButton fx:id="btnClearCustomer" layoutX="721.0" layoutY="357.0" onAction="#clearCustomerOnAction" prefHeight="47.0" prefWidth="136.0" style="-fx-background-color: radial-gradient(focus-angle 0.0deg, focus-distance 0.0% , center 50.0% 51.8957%, radius 50.0%, #0acafe 0.0%, #0acafe 41.6107%, #0280f6 100.0%); -fx-background-radius: 32;" text="Clear" textFill="WHITE">
+                    <font>
+                        <Font name="Arial Bold" size="23.0" />
+                    </font>
+                    <ripplerFill>
+                        <LinearGradient endX="0.5876777251184835" endY="0.8815165876777251" startX="0.4265402843601896">
+                            <stops>
+                                <Stop>
+                                    <color>
+                                        <Color red="0.5215686559677124" green="0.9137254953384399" blue="1.0" />
+                                    </color>
+                                </Stop>
+                                <Stop offset="0.4795588476018988">
+                                    <color>
+                                        <Color red="0.03921568766236305" green="0.7921568751335144" blue="0.9960784316062927" />
+                                    </color>
+                                </Stop>
+                                <Stop offset="1.0">
+                                    <color>
+                                        <Color red="0.007843137718737125" green="0.501960813999176" blue="0.9647058844566345" />
+                                    </color>
+                                </Stop>
+                            </stops>
+                        </LinearGradient>
+                    </ripplerFill>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </JFXButton>
+                <JFXTextField fx:id="txtSearchCustomer" layoutX="268.0" layoutY="43.0" promptText="       search customer" style="-fx-background-color: A0E9FF;">
+                    <font>
+                        <Font name="Arial" size="14.0" />
+                    </font>
+                </JFXTextField>
+                <ImageView layoutX="436.0" layoutY="42.0" onMouseClicked="#searchCustomer">
+                    <image>
+                        <Image url="@../icons/search.png" />
+                    </image>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </ImageView>
+                <Text fx:id="lblCustomerID" fill="#000dff" layoutX="181.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="C001">
+                    <font>
+                        <Font name="Arial Bold" size="24.0" />
+                    </font>
+                </Text>
+            </children>
+        </Pane>
+        <Text layoutX="211.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer ID">
+            <font>
+                <Font name="Arial Bold" size="24.0" />
+            </font>
+        </Text>
+        <VBox layoutX="211.0" layoutY="196.0" prefHeight="203.0" prefWidth="854.0" spacing="20.0">
+            <children>
+                <Group>
+                    <children>
+                        <JFXTextField fx:id="txtCustomerName" layoutX="210.0" prefHeight="33.0" prefWidth="443.0">
+                            <font>
+                                <Font name="Arial" size="18.0" />
+                            </font>
+                        </JFXTextField>
+                        <Text layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer Name" wrappingWidth="202.0546875">
+                            <font>
+                                <Font name="Arial Bold" size="22.0" />
+                            </font>
+                        </Text>
+                    </children>
+                </Group>
+                <Group>
+                    <children>
+                        <JFXTextField fx:id="txtXCustomerEmail" layoutX="210.0" prefHeight="33.0" prefWidth="443.0">
+                            <font>
+                                <Font name="Arial" size="18.0" />
+                            </font>
+                        </JFXTextField>
+                        <Text layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer Email" wrappingWidth="202.0546875">
+                            <font>
+                                <Font name="Arial Bold" size="22.0" />
+                            </font>
+                        </Text>
+                    </children>
+                </Group>
+                <Group>
+                    <children>
+                        <JFXTextField fx:id="txtCustomerAddress" layoutX="210.0" prefHeight="33.0" prefWidth="443.0">
+                            <font>
+                                <Font name="Arial" size="18.0" />
+                            </font>
+                        </JFXTextField>
+                        <Text layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer Address" wrappingWidth="202.0546875">
+                            <font>
+                                <Font name="Arial Bold" size="22.0" />
+                            </font>
+                        </Text>
+                    </children>
+                </Group>
+                <Group>
+                    <children>
+                        <JFXTextField fx:id="txtCustomerContact" layoutX="210.0" prefHeight="33.0" prefWidth="443.0">
+                            <font>
+                                <Font name="Arial" size="18.0" />
+                            </font>
+                        </JFXTextField>
+                        <Text layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer Contact" wrappingWidth="202.0546875">
+                            <font>
+                                <Font name="Arial Bold" size="22.0" />
+                            </font>
+                        </Text>
+                    </children>
+                </Group>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

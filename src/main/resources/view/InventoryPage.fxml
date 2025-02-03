@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="cashierinventoryPane" prefHeight="887.0" prefWidth="1328.0" style="-fx-background-color: linear-gradient(from 96.6825% 0.0% to 100.0% 100.0%, #00aeff 0.0%, #00aeff 0.6711%, #eeeeee 81.4024%, #ffffff 100.0%);" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.assignment.final_course_work.controller.InventoryPageController">
+    <children>
+        <Pane layoutX="135.0" layoutY="87.0" prefHeight="384.0" prefWidth="1068.0" style="-fx-background-color: linear-gradient(from 85.3081% 6.6351% to 87.2038% 92.4171%, #00b2ff 0.0%, #00b2ff 0.6711%, #68edd7 36.6324%, #94fff1 53.6913%, #68edd7 71.8121%, #00aeff 100.0%); -fx-background-radius: 72;">
+            <children>
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="384.0" stroke="#0718b5" strokeType="INSIDE" style="-fx-arc-height: 140; -fx-arc-width: 140;" width="1068.0" />
+                <VBox layoutX="53.0" layoutY="118.0" prefHeight="201.0" prefWidth="431.0" spacing="20.0">
+                    <children>
+                        <HBox prefHeight="32.0" prefWidth="202.0">
+                            <children>
+                                <Text fx:id="lblMedicineIDText" strokeType="OUTSIDE" strokeWidth="0.0" text="Medicine ID :  ">
+                                    <font>
+                                        <Font name="Arial Bold" size="28.0" />
+                                    </font>
+                                </Text>
+                                <Text fx:id="lblMedicineID" strokeType="OUTSIDE" strokeWidth="0.0" text="M001">
+                                    <font>
+                                        <Font name="Arial Bold" size="28.0" />
+                                    </font>
+                                </Text>
+                            </children>
+                        </HBox>
+                        <HBox prefHeight="32.0" prefWidth="410.0">
+                            <children>
+                                <Text fx:id="lblMedicineIDText1" strokeType="OUTSIDE" strokeWidth="0.0" text="Medicine Name : ">
+                                    <font>
+                                        <Font name="Arial Bold" size="28.0" />
+                                    </font>
+                                </Text>
+                                <Text fx:id="lblMedicineName" strokeType="OUTSIDE" strokeWidth="0.0" text="M001" wrappingWidth="194.041015625">
+                                    <font>
+                                        <Font name="Arial Bold" size="28.0" />
+                                    </font>
+                                </Text>
+                            </children>
+                        </HBox>
+                        <HBox prefHeight="32.0" prefWidth="202.0">
+                            <children>
+                                <Text fx:id="lblMedicineIDText2" strokeType="OUTSIDE" strokeWidth="0.0" text="Medicine Category : ">
+                                    <font>
+                                        <Font name="Arial Bold" size="28.0" />
+                                    </font>
+                                </Text>
+                                <Text fx:id="lblMedicineCategory" strokeType="OUTSIDE" strokeWidth="0.0" text="M001">
+                                    <font>
+                                        <Font name="Arial Bold" size="28.0" />
+                                    </font>
+                                </Text>
+                            </children>
+                        </HBox>
+                        <HBox prefHeight="32.0" prefWidth="202.0">
+                            <children>
+                                <Text fx:id="lblMedicineIDText3" strokeType="OUTSIDE" strokeWidth="0.0" text="Unit Price   : ">
+                                    <font>
+                                        <Font name="Arial Bold" size="28.0" />
+                                    </font>
+                                </Text>
+                                <Text fx:id="lblUnitPrice" strokeType="OUTSIDE" strokeWidth="0.0" text="M001">
+                                    <font>
+                                        <Font name="Arial Bold" size="28.0" />
+                                    </font>
+                                </Text>
+                            </children>
+                        </HBox>
+                        <HBox prefHeight="32.0" prefWidth="202.0">
+                            <children>
+                                <Text fx:id="lblMedicineIDText32" strokeType="OUTSIDE" strokeWidth="0.0" text="Pack Price  : ">
+                                    <font>
+                                        <Font name="Arial Bold" size="28.0" />
+                                    </font>
+                                </Text>
+                                <Text fx:id="lblPackPrice" strokeType="OUTSIDE" strokeWidth="0.0" text="M001">
+                                    <font>
+                                        <Font name="Arial Bold" size="28.0" />
+                                    </font>
+                                </Text>
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+                <VBox layoutX="496.0" layoutY="115.0" prefHeight="103.0" prefWidth="319.0" spacing="20.0">
+                    <children>
+                        <HBox prefHeight="32.0" prefWidth="202.0">
+                            <children>
+                                <Text fx:id="lblMedicineIDText31" strokeType="OUTSIDE" strokeWidth="0.0" text="Available Medicines : ">
+                                    <font>
+                                        <Font name="Arial Bold" size="28.0" />
+                                    </font>
+                                </Text>
+                                <Text fx:id="lblMedicines" strokeType="OUTSIDE" strokeWidth="0.0" text="M001">
+                                    <font>
+                                        <Font name="Arial Bold" size="28.0" />
+                                    </font>
+                                </Text>
+                            </children>
+                        </HBox>
+                        <HBox prefHeight="32.0" prefWidth="202.0">
+                            <children>
+                                <Text fx:id="lblMedicineIDText311" strokeType="OUTSIDE" strokeWidth="0.0" text="Available Packs : ">
+                                    <font>
+                                        <Font name="Arial Bold" size="28.0" />
+                                    </font>
+                                </Text>
+                                <Text fx:id="lblAvailablePacks" strokeType="OUTSIDE" strokeWidth="0.0" text="M001">
+                                    <font>
+                                        <Font name="Arial Bold" size="28.0" />
+                                    </font>
+                                </Text>
+                            </children>
+                        </HBox>
+                        <HBox prefHeight="32.0" prefWidth="202.0" />
+                    </children>
+                </VBox>
+                <HBox layoutX="339.0" layoutY="23.0" prefHeight="88.0" prefWidth="516.0" spacing="100.0">
+                    <children>
+                        <ComboBox fx:id="MedicineOnAction" onAction="#medicineOnActionOnAction" onMouseClicked="#selectMedicine" prefHeight="48.0" prefWidth="373.0" promptText="select the medicine" style="-fx-background-radius: 32; -fx-background-color: white;" />
+                    </children>
+                </HBox>
+            </children>
+        </Pane>
+        <TableView fx:id="tblInventory" layoutX="8.0" layoutY="489.0" prefHeight="392.0" prefWidth="1315.0">
+            <columns>
+                <TableColumn fx:id="colMedicineID" prefWidth="159.0" text="Medicine ID" />
+                <TableColumn fx:id="colMedicineName" prefWidth="354.0" text="Medicine Name" />
+                <TableColumn fx:id="colMedicineQuantity" prefWidth="359.0" text="Medicine Quantity" />
+                <TableColumn fx:id="colPacksQuantity" prefWidth="201.0" text="Packs Quantity" />
+                <TableColumn fx:id="colexpiredDate" prefWidth="241.0" text="Expired Date" />
+            </columns>
+        </TableView>
+        <Text layoutX="3.0" layoutY="66.0" stroke="#ecedff" strokeType="OUTSIDE" text="Inventory" textAlignment="CENTER" wrappingWidth="1321.13671875">
+            <font>
+                <Font name="Arial Bold" size="50.0" />
+            </font>
+            <fill>
+                <LinearGradient endX="1.0" endY="1.0">
+                    <stops>
+                        <Stop>
+                            <color>
+                                <Color />
+                            </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                            <color>
+                                <Color red="0.09892787784337997" green="0.09892787784337997" blue="0.7368420958518982" />
+                            </color>
+                        </Stop>
+                    </stops>
+                </LinearGradient>
+            </fill>
+        </Text>
+    </children>
+</AnchorPane>

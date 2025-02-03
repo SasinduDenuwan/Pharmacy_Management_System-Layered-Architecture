@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+
+<AnchorPane fx:id="splashScreen" prefHeight="500.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.assignment.final_course_work.controller.SplashScreenPage">
+    <children>
+        <ImageView fitHeight="508.0" fitWidth="850.0" layoutY="-5.0">
+            <image>
+                <Image url="@../images/SplashScreenBackgroundImage.jpg" />
+            </image>
+        </ImageView>
+        <Rectangle fx:id="loadingBar" arcHeight="5.0" arcWidth="5.0" fill="#d4e6f5" height="47.0" layoutX="15.0" layoutY="452.0" stroke="#44637c" strokeType="INSIDE" style="-fx-cursor: WAIT;" width="824.0" />
+        <Rectangle fx:id="progressBar" arcHeight="5.0" arcWidth="5.0" fill="#5af9ff" height="40.0" layoutX="18.0" layoutY="456.0" stroke="WHITE" strokeType="INSIDE" style="-fx-cursor: WAIT;" width="18.0" />
+    </children>
+</AnchorPane>

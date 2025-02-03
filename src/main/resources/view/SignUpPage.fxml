@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="signUpPage" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.assignment.final_course_work.controller.SignUpPageController">
+    <children>
+        <AnchorPane fx:id="signUpPage1" layoutX="5.0" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-radius: 35; -fx-background-color: p;">
+            <children>
+                <Group>
+                    <children>
+                        <Group>
+                            <children>
+                                <ImageView fitHeight="800.0" fitWidth="670.0">
+                                    <image>
+                                        <Image url="@../images/SignUpPageBackgroundImage1.png" />
+                                    </image>
+                                </ImageView>
+                            </children>
+                        </Group>
+                    </children>
+                </Group>
+                <Pane layoutX="705.0" layoutY="6.0" prefHeight="793.0" prefWidth="491.0" style="-fx-background-color: #6E4DBE; -fx-background-radius: 40;">
+                    <children>
+                        <Pane layoutX="13.0" layoutY="12.0" prefHeight="772.0" prefWidth="467.0" style="-fx-background-color: white; -fx-background-radius: 30;">
+                            <children>
+                                <Text layoutX="166.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sign Up">
+                                    <font>
+                                        <Font name="Arial Bold" size="36.0" />
+                                    </font>
+                                    <fill>
+                                        <LinearGradient endX="1.0" endY="1.0" startX="1.0" startY="0.16587677725118483">
+                                            <stops>
+                                                <Stop>
+                                                    <color>
+                                                        <Color red="0.21176470816135406" green="0.09019608050584793" blue="0.41960784792900085" />
+                                                    </color>
+                                                </Stop>
+                                                <Stop offset="0.006711409395973154">
+                                                    <color>
+                                                        <Color red="0.21176470816135406" green="0.09019608050584793" blue="0.41960784792900085" />
+                                                    </color>
+                                                </Stop>
+                                                <Stop offset="1.0">
+                                                    <color>
+                                                        <Color red="0.019607843831181526" green="0.5098039507865906" blue="0.9764705896377563" />
+                                                    </color>
+                                                </Stop>
+                                            </stops>
+                                        </LinearGradient>
+                                    </fill>
+                                </Text>
+                                <Pane fx:id="signUpDetails" layoutX="14.0" layoutY="65.0" prefHeight="694.0" prefWidth="436.0" style="-fx-background-color: white; -fx-border-color: white;">
+                                    <children>
+                                        <VBox layoutX="35.0" layoutY="6.0" prefHeight="584.0" prefWidth="381.0" spacing="20.0">
+                                            <children>
+                                                <Group>
+                                                    <children>
+                                                        <Group>
+                                                            <children>
+                                                                <JFXTextField fx:id="txtUserName" alignment="BOTTOM_LEFT" focusColor="#0b396e" layoutX="43.0" prefHeight="44.0" prefWidth="338.0" promptText="username">
+                                                                    <font>
+                                                                        <Font name="Arial" size="18.0" />
+                                                                    </font>
+                                                                    <cursor>
+                                                                        <Cursor fx:constant="TEXT" />
+                                                                    </cursor>
+                                                                    <unFocusColor>
+                                                                        <LinearGradient endX="1.0" endY="1.0">
+                                                                            <stops>
+                                                                                <Stop>
+                                                                                    <color>
+                                                                                        <Color />
+                                                                                    </color>
+                                                                                </Stop>
+                                                                                <Stop offset="1.0">
+                                                                                    <color>
+                                                                                        <Color red="0.15294118225574493" green="0.45098039507865906" blue="0.843137264251709" />
+                                                                                    </color>
+                                                                                </Stop>
+                                                                            </stops>
+                                                                        </LinearGradient>
+                                                                    </unFocusColor>
+                                                                </JFXTextField>
+                                                                <ImageView fitHeight="30.0" fitWidth="30.0" layoutY="17.0">
+                                                                    <image>
+                                                                        <Image url="@../icons/user1.png" />
+                                                                    </image>
+                                                                </ImageView>
+                                                            </children>
+                                                        </Group>
+                                                    </children>
+                                                </Group>
+                                                <Group>
+                                                    <children>
+                                                        <JFXTextField fx:id="txtFirstName" alignment="BOTTOM_LEFT" focusColor="#0b396e" layoutX="43.0" prefHeight="44.0" prefWidth="338.0" promptText="first name">
+                                                            <font>
+                                                                <Font name="Arial" size="18.0" />
+                                                            </font>
+                                                            <cursor>
+                                                                <Cursor fx:constant="TEXT" />
+                                                            </cursor>
+                                                            <unFocusColor>
+                                                                <LinearGradient endX="1.0" endY="1.0">
+                                                                    <stops>
+                                                                        <Stop>
+                                                                            <color>
+                                                                                <Color />
+                                                                            </color>
+                                                                        </Stop>
+                                                                        <Stop offset="1.0">
+                                                                            <color>
+                                                                                <Color red="0.15294118225574493" green="0.45098039507865906" blue="0.843137264251709" />
+                                                                            </color>
+                                                                        </Stop>
+                                                                    </stops>
+                                                                </LinearGradient>
+                                                            </unFocusColor>
+                                                        </JFXTextField>
+                                                        <ImageView fitHeight="30.0" fitWidth="30.0" layoutY="17.0">
+                                                            <image>
+                                                                <Image url="@../icons/user.png" />
+                                                            </image>
+                                                        </ImageView>
+                                                    </children>
+                                                </Group>
+                                                <Group>
+                                                    <children>
+                                                        <JFXTextField fx:id="txtLastName" alignment="BOTTOM_LEFT" focusColor="#0b3972" layoutX="43.0" prefHeight="44.0" prefWidth="338.0" promptText="last name">
+                                                            <font>
+                                                                <Font name="Arial" size="18.0" />
+                                                            </font>
+                                                            <cursor>
+                                                                <Cursor fx:constant="TEXT" />
+                                                            </cursor>
+                                                            <unFocusColor>
+                                                                <LinearGradient endX="1.0" endY="1.0">
+                                                                    <stops>
+                                                                        <Stop>
+                                                                            <color>
+                                                                                <Color />
+                                                                            </color>
+                                                                        </Stop>
+                                                                        <Stop offset="1.0">
+                                                                            <color>
+                                                                                <Color red="0.15294118225574493" green="0.45098039507865906" blue="0.843137264251709" />
+                                                                            </color>
+                                                                        </Stop>
+                                                                    </stops>
+                                                                </LinearGradient>
+                                                            </unFocusColor>
+                                                        </JFXTextField>
+                                                        <ImageView fitHeight="30.0" fitWidth="30.0" layoutY="17.0">
+                                                            <image>
+                                                                <Image url="@../icons/user.png" />
+                                                            </image>
+                                                        </ImageView>
+                                                    </children>
+                                                </Group>
+                                                <Group>
+                                                    <children>
+                                                        <Group>
+                                                            <children>
+                                                                <JFXTextField fx:id="txtEmail" alignment="BOTTOM_LEFT" focusColor="#0b3972" layoutX="43.0" prefHeight="44.0" prefWidth="338.0" promptText="email">
+                                                                    <font>
+                                                                        <Font name="Arial" size="18.0" />
+                                                                    </font>
+                                                                    <cursor>
+                                                                        <Cursor fx:constant="TEXT" />
+                                                                    </cursor>
+                                                                    <unFocusColor>
+                                                                        <LinearGradient endX="1.0" endY="1.0">
+                                                                            <stops>
+                                                                                <Stop>
+                                                                                    <color>
+                                                                                        <Color />
+                                                                                    </color>
+                                                                                </Stop>
+                                                                                <Stop offset="1.0">
+                                                                                    <color>
+                                                                                        <Color red="0.15294118225574493" green="0.45098039507865906" blue="0.843137264251709" />
+                                                                                    </color>
+                                                                                </Stop>
+                                                                            </stops>
+                                                                        </LinearGradient>
+                                                                    </unFocusColor>
+                                                                </JFXTextField>
+                                                                <ImageView fitHeight="30.0" fitWidth="30.0" layoutY="17.0">
+                                                                    <image>
+                                                                        <Image url="@../icons/email.png" />
+                                                                    </image>
+                                                                </ImageView>
+                                                            </children>
+                                                        </Group>
+                                                        <Group>
+                                                            <children>
+                                                                <Group />
+                                                            </children>
+                                                        </Group>
+                                                    </children>
+                                                </Group>
+                                                <Group>
+                                                    <children>
+                                                        <JFXTextField fx:id="txtNIC" alignment="BOTTOM_LEFT" focusColor="#0b3972" layoutX="43.0" prefHeight="44.0" prefWidth="338.0" promptText="nic number">
+                                                            <font>
+                                                                <Font name="Arial" size="18.0" />
+                                                            </font>
+                                                            <cursor>
+                                                                <Cursor fx:constant="TEXT" />
+                                                            </cursor>
+                                                            <unFocusColor>
+                                                                <LinearGradient endX="1.0" endY="1.0">
+                                                                    <stops>
+                                                                        <Stop>
+                                                                            <color>
+                                                                                <Color />
+                                                                            </color>
+                                                                        </Stop>
+                                                                        <Stop offset="1.0">
+                                                                            <color>
+                                                                                <Color red="0.15294118225574493" green="0.45098039507865906" blue="0.843137264251709" />
+                                                                            </color>
+                                                                        </Stop>
+                                                                    </stops>
+                                                                </LinearGradient>
+                                                            </unFocusColor>
+                                                        </JFXTextField>
+                                                        <ImageView fitHeight="30.0" fitWidth="30.0" layoutY="17.0">
+                                                            <image>
+                                                                <Image url="@../icons/NIC.png" />
+                                                            </image>
+                                                        </ImageView>
+                                                    </children>
+                                                </Group>
+                                                <Group>
+                                                    <children>
+                                                        <JFXTextField fx:id="txtAdress" alignment="BOTTOM_LEFT" focusColor="#0b3972" layoutX="43.0" prefHeight="44.0" prefWidth="338.0" promptText="address">
+                                                            <font>
+                                                                <Font name="Arial" size="18.0" />
+                                                            </font>
+                                                            <cursor>
+                                                                <Cursor fx:constant="TEXT" />
+                                                            </cursor>
+                                                            <unFocusColor>
+                                                                <LinearGradient endX="1.0" endY="1.0">
+                                                                    <stops>
+                                                                        <Stop>
+                                                                            <color>
+                                                                                <Color />
+                                                                            </color>
+                                                                        </Stop>
+                                                                        <Stop offset="1.0">
+                                                                            <color>
+                                                                                <Color red="0.15294118225574493" green="0.45098039507865906" blue="0.843137264251709" />
+                                                                            </color>
+                                                                        </Stop>
+                                                                    </stops>
+                                                                </LinearGradient>
+                                                            </unFocusColor>
+                                                        </JFXTextField>
+                                                        <ImageView fitHeight="30.0" fitWidth="30.0" layoutY="17.0">
+                                                            <image>
+                                                                <Image url="@../icons/location.png" />
+                                                            </image>
+                                                        </ImageView>
+                                                    </children>
+                                                </Group>
+                                                <Group>
+                                                    <children>
+                                                        <JFXTextField fx:id="txtContact" alignment="BOTTOM_LEFT" focusColor="#0b3972" layoutX="43.0" prefHeight="44.0" prefWidth="338.0" promptText="contact number">
+                                                            <font>
+                                                                <Font name="Arial" size="18.0" />
+                                                            </font>
+                                                            <cursor>
+                                                                <Cursor fx:constant="TEXT" />
+                                                            </cursor>
+                                                            <unFocusColor>
+                                                                <LinearGradient endX="1.0" endY="1.0">
+                                                                    <stops>
+                                                                        <Stop>
+                                                                            <color>
+                                                                                <Color />
+                                                                            </color>
+                                                                        </Stop>
+                                                                        <Stop offset="1.0">
+                                                                            <color>
+                                                                                <Color red="0.15294118225574493" green="0.45098039507865906" blue="0.843137264251709" />
+                                                                            </color>
+                                                                        </Stop>
+                                                                    </stops>
+                                                                </LinearGradient>
+                                                            </unFocusColor>
+                                                        </JFXTextField>
+                                                        <ImageView fitHeight="30.0" fitWidth="30.0" layoutY="17.0">
+                                                            <image>
+                                                                <Image url="@../icons/phone.png" />
+                                                            </image>
+                                                        </ImageView>
+                                                    </children>
+                                                </Group>
+                                                <Group>
+                                                    <children>
+                                                        <Label fx:id="lblCreatePW" layoutX="40.0" layoutY="2.0" prefHeight="28.0" prefWidth="318.0">
+                                                            <font>
+                                                                <Font name="Arial" size="18.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <ImageView fitHeight="30.0" fitWidth="30.0" layoutY="5.0">
+                                                            <image>
+                                                                <Image url="@../icons/password.png" />
+                                                            </image>
+                                                        </ImageView>
+                                                        <JFXPasswordField fx:id="txtCreatePW" layoutX="40.0" prefHeight="25.0" prefWidth="338.0" promptText="create password">
+                                                            <unFocusColor>
+                                                                <LinearGradient endX="1.0" endY="1.0">
+                                                                    <stops>
+                                                                        <Stop>
+                                                                            <color>
+                                                                                <Color />
+                                                                            </color>
+                                                                        </Stop>
+                                                                        <Stop offset="1.0">
+                                                                            <color>
+                                                                                <Color red="0.07102826237678528" green="0.206735298037529" blue="0.6973684430122375" />
+                                                                            </color>
+                                                                        </Stop>
+                                                                    </stops>
+                                                                </LinearGradient>
+                                                            </unFocusColor>
+                                                            <font>
+                                                                <Font name="Arial" size="18.0" />
+                                                            </font>
+                                                        </JFXPasswordField>
+                                                        <ImageView fx:id="checkCreatePW" fitHeight="30.0" fitWidth="30.0" layoutX="348.0" layoutY="6.0" onMousePressed="#showCreatePassword" onMouseReleased="#hideCreatePassword">
+                                                            <image>
+                                                                <Image url="@../icons/closedEye.png" />
+                                                            </image>
+                                                            <cursor>
+                                                                <Cursor fx:constant="HAND" />
+                                                            </cursor>
+                                                        </ImageView>
+                                                    </children>
+                                                </Group>
+                                                <Group>
+                                                    <children>
+                                                        <Label fx:id="lblConfirmPW" layoutX="40.0" layoutY="2.0" prefHeight="28.0" prefWidth="318.0">
+                                                            <font>
+                                                                <Font name="Arial" size="18.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <ImageView fitHeight="30.0" fitWidth="30.0" layoutY="5.0">
+                                                            <image>
+                                                                <Image url="@../icons/password.png" />
+                                                            </image>
+                                                        </ImageView>
+                                                        <JFXPasswordField fx:id="txtConfirmPW" layoutX="40.0" prefHeight="25.0" prefWidth="338.0" promptText="confirm password">
+                                                            <unFocusColor>
+                                                                <LinearGradient endX="1.0" endY="1.0">
+                                                                    <stops>
+                                                                        <Stop>
+                                                                            <color>
+                                                                                <Color />
+                                                                            </color>
+                                                                        </Stop>
+                                                                        <Stop offset="1.0">
+                                                                            <color>
+                                                                                <Color red="0.07102826237678528" green="0.206735298037529" blue="0.6973684430122375" />
+                                                                            </color>
+                                                                        </Stop>
+                                                                    </stops>
+                                                                </LinearGradient>
+                                                            </unFocusColor>
+                                                            <font>
+                                                                <Font name="Arial" size="18.0" />
+                                                            </font>
+                                                        </JFXPasswordField>
+                                                        <ImageView fx:id="checkConfirmPW" fitHeight="30.0" fitWidth="30.0" layoutX="348.0" layoutY="6.0" onMousePressed="#showConfirmPW" onMouseReleased="#hideConfirmPW">
+                                                            <image>
+                                                                <Image url="@../icons/closedEye.png" />
+                                                            </image>
+                                                            <cursor>
+                                                                <Cursor fx:constant="HAND" />
+                                                            </cursor>
+                                                        </ImageView>
+                                                    </children>
+                                                </Group>
+                                            </children>
+                                        </VBox>
+                                        <Label fx:id="lblPasswordStatus" layoutX="73.0" layoutY="575.0" text="password correct" textFill="#0ef80e">
+                                            <font>
+                                                <Font name="System Bold" size="20.0" />
+                                            </font>
+                                        </Label>
+                                        <JFXButton fx:id="btnRegister" layoutX="105.0" layoutY="634.0" onAction="#goToTheLoginPane" prefHeight="47.0" prefWidth="226.0" style="-fx-background-color: #04B2D9; -fx-background-radius: 40;" text="Register" textFill="WHITE">
+                                            <font>
+                                                <Font name="System Bold" size="22.0" />
+                                            </font>
+                                            <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                            </cursor>
+                                        </JFXButton>
+                                    </children>
+                                </Pane>
+                            </children>
+                        </Pane>
+                    </children>
+                </Pane>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>
