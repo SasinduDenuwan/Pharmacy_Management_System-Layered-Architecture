@@ -150,6 +150,16 @@
                     </font>
                 </Text>
                 <ComboBox fx:id="cmbMedicine" layoutX="24.0" layoutY="59.0" onAction="#selectMedicineOnAction" prefHeight="35.0" prefWidth="184.0" style="-fx-background-color: white; -fx-background-radius: 32;" />
+            <Label layoutX="160.0" layoutY="109.0" text="Rs.">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblUnitPrice" layoutX="192.0" layoutY="109.0" prefHeight="30.0" prefWidth="138.0" text="0">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
             </children>
         </Pane>
         <Pane layoutX="65.0" layoutY="102.0" prefHeight="220.0" prefWidth="310.0" style="-fx-background-color: #37AFE1; -fx-background-radius: 50;">

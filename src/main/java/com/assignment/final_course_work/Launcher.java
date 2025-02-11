@@ -13,7 +13,7 @@ import java.util.Objects;
 public class Launcher extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/view/SignUpPage.fxml")));
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/view/SplashScreen.fxml")));
         Scene scene = new Scene(root);
         stage.setTitle("Pharmacy Management System");
         stage.getIcons().add(new Image(Objects.requireNonNull(getClass().getResourceAsStream("/icons/PharmacyLOGO.png"))));

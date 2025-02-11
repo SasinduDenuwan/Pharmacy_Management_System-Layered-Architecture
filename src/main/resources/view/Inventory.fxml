@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="medicinePage" prefHeight="887.0" prefWidth="1328.0" style="-fx-background-color: A0E9FF;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.assignment.final_course_work.controller.InventoryPageController">
+   <children>
+      <Text layoutX="13.0" layoutY="72.0" stroke="#3b42ff" strokeType="OUTSIDE" text="Medicine" textAlignment="CENTER" wrappingWidth="1321.13671875">
+         <font>
+            <Font name="Arial Bold" size="50.0" />
+         </font>
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.09892787784337997" green="0.09892787784337997" blue="0.7368420958518982" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Text>
+      <Pane layoutX="202.0" layoutY="110.0" prefHeight="433.0" prefWidth="956.0" style="-fx-background-color: radial-gradient(focus-angle 0.0deg, focus-distance 0.0% , center 44.4751% 50.0%, radius 50.0%, #d4e5ee 0.0%, #4cc9fe 100.0%); -fx-background-radius: 50;">
+         <children>
+            <JFXButton fx:id="btnSaveMedicine" layoutX="183.0" layoutY="363.0" onAction="#saveMedicineOnAction" prefHeight="47.0" prefWidth="136.0" style="-fx-background-color: radial-gradient(focus-angle 0.0deg, focus-distance 0.0% , center 50.0% 51.8957%, radius 50.0%, #0acafe 0.0%, #0acafe 41.6107%, #0280f6 100.0%); -fx-background-radius: 32;" text="Save" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="23.0" />
+               </font>
+               <ripplerFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.006711409395973154">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.5387133737109182">
+                           <color>
+                              <Color red="0.21320663392543793" green="0.7676860094070435" blue="0.9210526347160339" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.02302631549537182" green="0.48135966062545776" blue="0.7105262875556946" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </ripplerFill>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="btnUpdateMedicine" layoutX="402.0" layoutY="363.0" onAction="#updateMedicineOnAction" prefHeight="47.0" prefWidth="136.0" style="-fx-background-color: radial-gradient(focus-angle 0.0deg, focus-distance 0.0% , center 50.0% 51.8957%, radius 50.0%, #0acafe 0.0%, #0acafe 41.6107%, #0280f6 100.0%); -fx-background-radius: 32;" text="Update" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="23.0" />
+               </font>
+               <ripplerFill>
+                  <LinearGradient endX="0.5876777251184835" endY="0.8815165876777251" startX="0.4265402843601896">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.006711409395973154">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.4899328859060403">
+                           <color>
+                              <Color red="0.32549020648002625" green="0.8509804010391235" blue="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.996951219512195">
+                           <color>
+                              <Color red="0.03179824724793434" green="0.6046966314315796" blue="0.7631579041481018" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.03179824724793434" green="0.6046966314315796" blue="0.7631579041481018" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </ripplerFill>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="btnDeleteMedicine" layoutX="628.0" layoutY="362.0" onAction="#deleteMedicineOnAction" prefHeight="47.0" prefWidth="136.0" style="-fx-background-color: radial-gradient(focus-angle 0.0deg, focus-distance 0.0% , center 50.0% 51.8957%, radius 50.0%, #0acafe 0.0%, #0acafe 41.6107%, #0280f6 100.0%); -fx-background-radius: 32;" text="Delete" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="23.0" />
+               </font>
+               <ripplerFill>
+                  <LinearGradient endX="0.5876777251184835" endY="0.8815165876777251" startX="0.4265402843601896">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.006711409395973154">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.46646341463414637">
+                           <color>
+                              <Color red="0.30079999566078186" green="0.6310533285140991" blue="0.9399999976158142" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color green="0.4622806906700134" blue="0.8947368264198303" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </ripplerFill>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <Text fx:id="lblMedicineID" fill="#000dff" layoutX="181.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="C001">
+               <font>
+                  <Font name="Arial Bold" size="24.0" />
+               </font>
+            </Text>
+            <Text layoutX="33.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Medicine ID">
+               <font>
+                  <Font name="Arial Bold" size="24.0" />
+               </font>
+            </Text>
+            <Text layoutX="34.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Medicine Name">
+               <font>
+                  <Font name="Arial Bold" size="24.0" />
+               </font>
+            </Text>
+            <Text layoutX="35.0" layoutY="175.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Medicine Unit QTY">
+               <font>
+                  <Font name="Arial Bold" size="24.0" />
+               </font>
+            </Text>
+            <Text layoutX="35.0" layoutY="216.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Medicine Packages QTY">
+               <font>
+                  <Font name="Arial Bold" size="24.0" />
+               </font>
+            </Text>
+            <Text layoutX="34.0" layoutY="259.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Medicine Unit Price">
+               <font>
+                  <Font name="Arial Bold" size="24.0" />
+               </font>
+            </Text>
+            <Text layoutX="34.0" layoutY="299.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Medicine Packages Price">
+               <font>
+                  <Font name="Arial Bold" size="24.0" />
+               </font>
+            </Text>
+            <JFXTextField fx:id="txtMedicineName" layoutX="240.0" layoutY="98.0" prefHeight="25.0" prefWidth="264.0" />
+            <TextField fx:id="txtUnitQTY" layoutX="323.0" layoutY="153.0" prefHeight="25.0" prefWidth="120.0" />
+            <TextField fx:id="txtPacksQTY" layoutX="324.0" layoutY="196.0" prefHeight="25.0" prefWidth="120.0" />
+            <TextField fx:id="txtUnitPrice" layoutX="323.0" layoutY="236.0" prefHeight="25.0" prefWidth="120.0" />
+            <TextField fx:id="txtPacksPrice" layoutX="323.0" layoutY="277.0" prefHeight="25.0" prefWidth="120.0" />
+         </children>
+      </Pane>
+      <TableView fx:id="medicineTabke" layoutX="4.0" layoutY="548.0" onMouseClicked="#onClickTable" prefHeight="363.0" prefWidth="1327.0">
+         <columns>
+            <TableColumn fx:id="medicineID" prefWidth="118.66666412353516" text="Medicine ID" />
+            <TableColumn fx:id="medicineName" prefWidth="375.3333435058594" text="Medicine Name" />
+            <TableColumn fx:id="untiQTY" minWidth="0.0" prefWidth="203.66668701171875" text="Medicine Unit QTY" />
+            <TableColumn fx:id="packsQTY" prefWidth="211.33331298828125" text="Medicine Packs QTY" />
+            <TableColumn fx:id="untiPrice" prefWidth="253.33331298828125" text="Medicine Unit Price" />
+            <TableColumn fx:id="packsPrice" prefWidth="168.3333740234375" text="Medicine Packs Price" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

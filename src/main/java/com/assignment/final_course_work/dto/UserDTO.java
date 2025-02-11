@@ -12,5 +12,5 @@ public class UserDTO {
     private String userID;
     private String userName;
     private String userPW;
-    private boolean isCorrect;
+    private String userMail;
 }

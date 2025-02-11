@@ -7,20 +7,18 @@
     o.order_id,
     o.order_date,
     c.customer_name,
-    c.customer_contact_number,
     m.medicine_name,
-    m.medicine_category,
-    od.quantity_single,
-    od.quantity_packs,
-    od.price_single,
-    od.price_packs,
+    od.qty_unit,
+    od.qty_packs,
+    od.qty_unit_price,
+    od.qty_packs_price,
     o.total_price
 FROM 
     orders o
 JOIN 
-    order_details od ON o.order_id = od.order_id
+    order_detail od ON o.order_id = od.order_id
 JOIN 
-    medicines m ON od.medicine_id = m.medicine_id
+    medicine m ON od.medicine_id = m.medicine_id
 JOIN 
     customer c ON o.customer_id = c.customer_id
 WHERE 
@@ -41,39 +39,29 @@ WHERE
 		<property name="com.jaspersoft.studio.field.label" value="customer_name"/>
 		<property name="com.jaspersoft.studio.field.tree.path" value="customer"/>
 	</field>
-	<field name="customer_contact_number" class="java.lang.String">
-		<property name="com.jaspersoft.studio.field.name" value="customer_contact_number"/>
-		<property name="com.jaspersoft.studio.field.label" value="customer_contact_number"/>
-		<property name="com.jaspersoft.studio.field.tree.path" value="customer"/>
-	</field>
 	<field name="medicine_name" class="java.lang.String">
 		<property name="com.jaspersoft.studio.field.name" value="medicine_name"/>
 		<property name="com.jaspersoft.studio.field.label" value="medicine_name"/>
 		<property name="com.jaspersoft.studio.field.tree.path" value="medicines"/>
 	</field>
-	<field name="medicine_category" class="java.lang.String">
-		<property name="com.jaspersoft.studio.field.name" value="medicine_category"/>
-		<property name="com.jaspersoft.studio.field.label" value="medicine_category"/>
-		<property name="com.jaspersoft.studio.field.tree.path" value="medicines"/>
-	</field>
-	<field name="quantity_single" class="java.lang.Integer">
-		<property name="com.jaspersoft.studio.field.name" value="quantity_single"/>
-		<property name="com.jaspersoft.studio.field.label" value="quantity_single"/>
+	<field name="qty_unit" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="qty_unit"/>
+		<property name="com.jaspersoft.studio.field.label" value="qty_unit"/>
 		<property name="com.jaspersoft.studio.field.tree.path" value="order_details"/>
 	</field>
-	<field name="quantity_packs" class="java.lang.Integer">
-		<property name="com.jaspersoft.studio.field.name" value="quantity_packs"/>
-		<property name="com.jaspersoft.studio.field.label" value="quantity_packs"/>
+	<field name="qty_packs" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="qty_packs"/>
+		<property name="com.jaspersoft.studio.field.label" value="qty_packs"/>
 		<property name="com.jaspersoft.studio.field.tree.path" value="order_details"/>
 	</field>
-	<field name="price_single" class="java.math.BigDecimal">
-		<property name="com.jaspersoft.studio.field.name" value="price_single"/>
-		<property name="com.jaspersoft.studio.field.label" value="price_single"/>
+	<field name="qty_unit_price" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="qty_unit_price"/>
+		<property name="com.jaspersoft.studio.field.label" value="qty_unit_price"/>
 		<property name="com.jaspersoft.studio.field.tree.path" value="order_details"/>
 	</field>
-	<field name="price_packs" class="java.math.BigDecimal">
-		<property name="com.jaspersoft.studio.field.name" value="price_packs"/>
-		<property name="com.jaspersoft.studio.field.label" value="price_packs"/>
+	<field name="qty_packs_price" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="qty_packs_price"/>
+		<property name="com.jaspersoft.studio.field.label" value="qty_packs_price"/>
 		<property name="com.jaspersoft.studio.field.tree.path" value="order_details"/>
 	</field>
 	<field name="total_price" class="java.math.BigDecimal">
@@ -109,10 +97,10 @@ WHERE
 			<text><![CDATA[Medicine name]]></text>
 			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b3918ed1-ad02-4a62-bdaf-336187209911"/>
 		</element>
-		<element kind="staticText" uuid="23548fa6-b677-4256-91c2-c40e27e24491" x="95" y="0" width="92" height="30" fontSize="12.0" bold="true" hTextAlign="Center">
-			<text><![CDATA[Medicine category]]></text>
-			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="5a6f0547-5afb-4363-b8bb-25884f2184f3"/>
-		</element>
+<!--		<element kind="staticText" uuid="23548fa6-b677-4256-91c2-c40e27e24491" x="95" y="0" width="92" height="30" fontSize="12.0" bold="true" hTextAlign="Center">-->
+<!--			<text><![CDATA[Medicine category]]></text>-->
+<!--			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="5a6f0547-5afb-4363-b8bb-25884f2184f3"/>-->
+<!--		</element>-->
 		<element kind="staticText" uuid="f6b9208d-9008-4912-b67d-f0c5b1030b08" x="187" y="0" width="92" height="30" fontSize="12.0" bold="true" hTextAlign="Center">
 			<text><![CDATA[Quantity]]></text>
 			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="9a01a626-ff54-4e28-af5a-5258c8f6eeb4"/>
@@ -136,24 +124,22 @@ WHERE
 				<expression><![CDATA[$F{medicine_name}]]></expression>
 				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b3918ed1-ad02-4a62-bdaf-336187209911"/>
 			</element>
-			<element kind="textField" uuid="14871193-f3ae-47ba-b256-9fb093ea1b59" x="95" y="-1" width="92" height="30" fontSize="12.0" hTextAlign="Center">
-				<expression><![CDATA[$F{medicine_category}]]></expression>
-				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="5a6f0547-5afb-4363-b8bb-25884f2184f3"/>
-			</element>
+
 			<element kind="textField" uuid="b2e8f23d-d1eb-4289-8700-0e545cbfad18" x="187" y="0" width="92" height="30" fontSize="12.0" hTextAlign="Center">
-				<expression><![CDATA[$F{quantity_single}]]></expression>
+				<expression><![CDATA[$F{qty_unit}]]></expression>
 				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="9a01a626-ff54-4e28-af5a-5258c8f6eeb4"/>
 			</element>
 			<element kind="textField" uuid="83e838ef-63c7-4def-8f7f-170a655daa95" x="279" y="0" width="92" height="30" fontSize="12.0" hTextAlign="Center">
-				<expression><![CDATA[$F{quantity_packs}]]></expression>
+				<expression><![CDATA[$F{qty_packs}]]></expression>
 				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="dda5a2f5-4401-4626-b263-14ce5e97bffd"/>
 			</element>
 			<element kind="textField" uuid="984dc88e-263a-485d-8b12-fb5ab108e07a" x="371" y="0" width="92" height="30" fontSize="12.0" hTextAlign="Center">
-				<expression><![CDATA[$F{price_single}]]></expression>
+				<expression><![CDATA[$F{qty_unit_price}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="1c4674d0-aff7-4547-b428-388688133560"/>
 				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="1c4674d0-aff7-4547-b428-388688133560"/>
 			</element>
 			<element kind="textField" uuid="32a42237-f48f-4eb0-8da9-63f64e076c1d" x="463" y="0" width="92" height="30" fontSize="12.0" hTextAlign="Center">
-				<expression><![CDATA[$F{price_packs}]]></expression>
+				<expression><![CDATA[$F{qty_packs_price}]]></expression>
 				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b7407d01-4d8e-49f9-98ec-49a8fe67a3e1"/>
 			</element>
 		</band>

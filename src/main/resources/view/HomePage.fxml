@@ -84,7 +84,7 @@
                         </LinearGradient>
                     </ripplerFill>
                 </JFXButton>
-                <JFXButton fx:id="btnCashierSales" onAction="#showCashierSales" prefHeight="67.0" prefWidth="178.0" style="-fx-background-radius: 32; -fx-background-color: radial-gradient(focus-angle 0.0deg, focus-distance 0.0% , center 50.0% 51.8957%, radius 50.0%, #0acafe 0.0%, #0acafe 41.6107%, #0280f6 100.0%);" text="Sales" textFill="WHITE">
+                <JFXButton fx:id="btnCashierSales" onAction="#showCashierSales" prefHeight="67.0" prefWidth="178.0" style="-fx-background-radius: 32; -fx-background-color: radial-gradient(focus-angle 0.0deg, focus-distance 0.0% , center 50.0% 51.8957%, radius 50.0%, #0acafe 0.0%, #0acafe 41.6107%, #0280f6 100.0%);" text="Stocks" textFill="WHITE">
                     <graphic>
                         <ImageView fitHeight="31.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
                             <image>

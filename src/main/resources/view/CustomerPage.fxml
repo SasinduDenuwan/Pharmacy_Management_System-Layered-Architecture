@@ -43,11 +43,10 @@
         <TableView fx:id="customerTable" layoutY="538.0" onMouseClicked="#onClickTable" prefHeight="363.0" prefWidth="1327.0">
             <columns>
                 <TableColumn fx:id="customerID" prefWidth="118.66666412353516" text="Customer ID" />
-                <TableColumn fx:id="customerName" prefWidth="197.33333587646484" text="Customer Name" />
-                <TableColumn fx:id="customerEmail" minWidth="0.0" prefWidth="207.33334350585938" text="Customer Email" />
-                <TableColumn fx:id="customerAddress" prefWidth="382.66668701171875" text="Customer Address" />
-                <TableColumn fx:id="customerPhone" prefWidth="253.33331298828125" text="Customer Contact Number" />
-                <TableColumn fx:id="customerAddEmployee" prefWidth="168.3333740234375" text="Employee ID" />
+                <TableColumn fx:id="customerName" prefWidth="242.0" text="Customer Name" />
+                <TableColumn fx:id="customerEmail" minWidth="0.0" prefWidth="308.0" text="Customer Email" />
+                <TableColumn fx:id="customerAddress" prefWidth="433.0" text="Customer Address" />
+                <TableColumn fx:id="customerPhone" prefWidth="224.0" text="Customer Contact Number" />
             </columns>
         </TableView>
         <Pane layoutX="189.0" layoutY="91.0" prefHeight="433.0" prefWidth="956.0" style="-fx-background-color: radial-gradient(focus-angle 0.0deg, focus-distance 0.0% , center 44.4751% 50.0%, radius 50.0%, #d4e5ee 0.0%, #4cc9fe 100.0%); -fx-background-radius: 50;">

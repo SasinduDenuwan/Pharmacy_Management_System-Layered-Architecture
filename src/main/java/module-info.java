@@ -12,5 +12,6 @@ module com.assignment.final_course_work {
     opens com.assignment.final_course_work.controller to javafx.fxml;
     exports com.assignment.final_course_work;
     exports com.assignment.final_course_work.controller;
+    opens com.assignment.final_course_work.view.tdm to javafx.base;
 
 }
